@@ -1,0 +1,12 @@
+[submodule "speed-dreams"]
+	path = speed-dreams
+	url = git@github.com:702nADOS/speed-dreams.git
+	branch = speeddreams-sumo
+[submodule "qemu-sa-vm"]
+	path = qemu-sa-vm
+	url = git@github.com:702nADOS/genode.git
+	branch = qemu-sa-vm
+[submodule "simcom-pb"]
+	path = simcom-pb
+	url = git@github.com:702nADOS/genode.git
+	branch = simcom-pb
