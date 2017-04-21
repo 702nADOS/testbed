@@ -10,3 +10,15 @@
 	path = simcom-pb
 	url = git@github.com:702nADOS/genode.git
 	branch = simcom-pb
+[submodule "SimCoupler"]
+	path = SimCoupler
+	url = git@github.com:argos-research/SimCoupler.git
+[submodule "simulators/sumo"]
+	path = simulators/sumo
+	url = git@github.com:argos-research/sumo.git
+[submodule "simulators/speed-dreams"]
+	path = simulators/speed-dreams
+	url = git@github.com:argos-research/speed-dreams.git
+[submodule "tools/TraCI-Proxy"]
+	path = tools/TraCI-Proxy
+	url = git@github.com:argos-research/TraCI-Proxy.git
