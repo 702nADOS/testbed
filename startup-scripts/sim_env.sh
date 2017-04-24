@@ -5,12 +5,15 @@ export TRACK
 : ${SUMO_HOME:=$(pwd)/../simulators/sumo/}
 export SUMO_HOME
 
+# download submodules
+git submodule update --init
+
 # compilation
 # simulators
 cd ../simulators/
 
 cd sumo
-./configure && make -j4
+./configure CXXFLAGS="--std=c++11" && make -j4
 cd ..
 
 cd speed-dreams
@@ -22,7 +25,6 @@ cd ../../
 cd ..
 # simcoupler
 cd SimCoupler
-git submodule update --init
 mkdir -p build
 cd build
 cmake ../ && make -j4
