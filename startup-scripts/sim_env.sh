@@ -6,7 +6,7 @@ export TRACK
 export SUMO_HOME
 
 # download submodules
-git submodule update --init --depth=1
+git submodule update --init
 
 # compilation
 # simulators
