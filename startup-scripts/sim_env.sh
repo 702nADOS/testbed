@@ -6,13 +6,18 @@ export TRACK
 export SUMO_HOME
 
 # download submodules
-git submodule update --init
+git submodule update --init --depth=1
 
 # compilation
 # simulators
 cd ../simulators/
 
 cd sumo
+# fix automake
+aclocal
+automake --add-missing
+autoreconf
+# ---
 ./configure CXXFLAGS="--std=c++11" && make -j4
 cd ..
 
