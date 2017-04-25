@@ -7,16 +7,23 @@ export SUMO_HOME
 
 # download submodules
 git submodule update --init
+# download and extract vrep
+cd ../simulators/
+mkdir -p v-rep
+cd v-rep
+wget -nc http://coppeliarobotics.com/files/V-REP_PRO_EDU_V3_4_0_Linux.tar.gz
+tar xfz V-REP_PRO_EDU_V3_4_0_Linux.tar.gz
+: ${VREP_PATH:=$(pwd)/V-REP_PRO_EDU_V3_4_0_Linux/}
+export VREP_PATH
+cd ..
 
 # compilation
 # simulators
-cd ../simulators/
-
 cd sumo
 # fix automake
 aclocal
 automake --add-missing
-autoreconf
+autoreconf --force --install
 # ---
 ./configure CXXFLAGS="--std=c++11" && make -j4
 cd ..
@@ -30,6 +37,8 @@ cd ../../
 cd ..
 # simcoupler
 cd SimCoupler
+# download submodules
+git submodule update --init
 mkdir -p build
 cd build
 cmake ../ && make -j4
