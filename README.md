@@ -1,7 +1,8 @@
-This is a collection repository which should include all necessary packages to startup the KIA4SM testbed environment
+#Branch of testbed for IDP of privatereese
 
+This branch is a new working branch for the testbed in which the IDP of privatereese should be developed.
 
-Its not complete yet and may contain bugs.
-If you are having trouble please contact "privatereese".
+detailed description is following.
+
 
 
